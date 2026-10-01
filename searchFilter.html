@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Time Search</title>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fafafa;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #efefef;
+    border-radius: 10px;
+    padding: 10px 14px;
+}
+
+.search-box span {
+    font-size: 20px;
+    color: #777;
+}
+
+.inp {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 15px;
+}
+
+.clear-btn {
+    border: none;
+    background: transparent;
+    color: #0095f6;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px 10px;
+}
+
+.clear-btn:hover {
+    color: #1877f2;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    background: white;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+}
+
+.card img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-info h3 {
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.user-info p {
+    font-size: 13px;
+    color: #777;
+}
+</style>
+</head>
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Time Search</title>
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #FFF9F2;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+    padding: 25px;
+    background: #F3E6D5;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(128, 0, 32, 0.12);
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #FFF9F2;
+    border: 2px solid transparent;
+    border-radius: 14px;
+    padding: 12px 16px;
+    transition: 0.3s;
+}
+
+.search-box:focus-within {
+    border-color: #D45060;
+    box-shadow: 0 0 0 4px rgba(212, 80, 96, 0.12);
+}
+
+.search-box span {
+    font-size: 22px;
+    color: #800020;
+}
+
+.inp {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #800020;
+    font-size: 15px;
+}
+
+.inp::placeholder {
+    color: #9b7777;
+}
+
+.recent-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 22px 4px 12px;
+}
+
+.recent-header h4 {
+    color: #800020;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.clear-btn {
+    border: none;
+    background: transparent;
+    color: #D45060;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 5px;
+    transition: 0.2s;
+}
+
+.clear-btn:hover {
+    color: #800020;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px;
+    background: #FFF9F2;
+    border: 1px solid rgba(128, 0, 32, 0.12);
+    border-radius: 14px;
+    transition: 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    border-color: #D45060;
+    box-shadow: 0 8px 20px rgba(128, 0, 32, 0.1);
+}
+
+.card img {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #F3E6D5;
+}
+
+.card h2 {
+    color: #800020;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.card p {
+    color: #8b6666;
+    font-size: 13px;
+}
+
+.cards h1 {
+    text-align: center;
+    color: #800020;
+    font-size: 18px;
+    padding: 25px 0;
+}
+</style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="search-box">
+            <span>⌕</span>
+            <input type="text" class="inp" placeholder="Search">
+        </div>
+
+        <div class="recent-header">
+            <h4>Recent</h4>
+            <button class="clear-btn">Clear all</button>
+        </div>
+
+        <div class="cards"></div>
+
+    </div>
+
+    <script src="searchFilter.js"></script>
+
+</body>
+
+</html>
+</html>
